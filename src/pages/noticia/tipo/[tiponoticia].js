@@ -10,7 +10,7 @@ export async function getServerSideProps(req) {
 export default function Page({ noticias }) {
   return <>
     <Container>
-      <Row xs={1} md={3}>
+      <Row xs={1} md={3} className="pt-2 g-4">
         {Array.isArray(noticias) ?
           noticias.map(noticia => (
             <Cards idnoticia={noticia.idnoticia}
