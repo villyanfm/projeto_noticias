@@ -1,29 +1,26 @@
-export function delNoticiaRequest(idnoticia, setResultadoCadastro, setShow) {
-    return async (e) => {
-        e.preventDefault();
-        const body = { _id: idnoticia };
-        try {
-            const response = await fetch(`https://apivillyanb.vercel.app/delnoticias`, {
-                method: "DELETE",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(body)
-            });
+export async function delNoticiaRequest(idnoticia, setResultadoCadastro, setShow) {
+    const body = { _id: idnoticia };
 
-            const result = await response.json();
+    try {
+        const response = await fetch("https://noticiasapi-omega.vercel.app/delnoticias", {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(body)
+        });
 
-            if (!result.status) {
-                setResultadoCadastro("Erro ao deletar notícia");
-            } else {
-                setResultadoCadastro("Notícia apagada com sucesso!");
-            }
+        const result = await response.json();
 
-            setShow(true);
-
-        } catch (err) {
-            setResultadoCadastro("Erro ao deletar notícia: " + err);
-            setShow(true);
+        if (!result.status) {
+            setResultadoCadastro("Erro ao deletar notícia");
+        } else {
+            setResultadoCadastro("Notícia apagada com sucesso!");
         }
-    };
+
+    } catch (err) {
+        setResultadoCadastro("Erro ao deletar notícia: " + err);
+    }
+
+    setShow(true);
 }

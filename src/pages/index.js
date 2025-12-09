@@ -2,7 +2,7 @@ import { Container, Row } from "react-bootstrap";
 import Cards from "./components/cards";
 export async function getServerSideProps() {
   // Fetch data from  API notícias
-  const res = await fetch('https://apivillyanb.vercel.app/noticias')
+  const res = await fetch('https://noticiasapi-omega.vercel.app/noticias')
   const repo = await res.json()
   // Pass data to the page via props
   return { props: { noticias: repo } }
@@ -11,7 +11,6 @@ export default function Home({ noticias }) {
   return <>
     <Container>
       <Row xs={1} md={3}>
-    
         {Array.isArray(noticias) ?
           noticias.map(noticia => (
             <Cards idnoticia={noticia._id}
@@ -25,3 +24,4 @@ export default function Home({ noticias }) {
     </Container>
   </>
 }
+// src/pages/index.js
