@@ -2,7 +2,7 @@ export async function delNoticiaRequest(idnoticia, setResultadoCadastro, setShow
     const body = { _id: idnoticia };
 
     try {
-        const response = await fetch("https://noticiasapi-omega.vercel.app/delnoticias", {
+        const response = await fetch("https://apivillyanb.vercel.app/delnoticias", {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"
