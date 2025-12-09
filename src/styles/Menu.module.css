@@ -2,8 +2,8 @@
   background: #2785e3;
   background: linear-gradient(
     180deg,
-    rgb(84, 142, 200) 0%,
-    rgba(9, 9, 121, 1) 83%,
-    rgba(0, 212, 255, 1) 100%
+    rgb(200, 198, 84) 0%,
+    rgb(0, 76, 13) 83%,
+    rgb(70, 0, 50) 100%
   );
 }

@@ -1,7 +1,7 @@
 export const noticias = [
     {
         "idnoticia": 1,
-        "titulonoticia": "Governo lança programa educacional",
+        "titulonoticia": "Acessando do Professor, não alterou o caminho",
         "conteudonoticia": "Governo lança programa educacional. Esta notícia traz um panorama recente no campo de cultura, destacando avanços, desafios e oportunidades que envolvem a sociedade atual. Com relevância nacional e internacional, o conteúdo explora aspectos fundamentais para o desenvolvimento e a compreensão das mudanças contemporâneas.",
         "tiponoticia": "cultura",
         "datahoracadastro": "2025-06-03T00:51:29.476899"

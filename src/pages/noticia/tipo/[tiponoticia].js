@@ -2,18 +2,18 @@ import { Container, Row } from "react-bootstrap";
 import Cards from "../../components/cards";
 export async function getServerSideProps(req) {
   // Fetch data from  API notícias
-  const res = await fetch('https://projeto-noticias-psi.vercel.app/api/noticias/tipo/' + req.query.tiponoticia)
+  const res = await fetch('https://apivillyanb.vercel.app/noticias' + req.query.tiponoticia)
   const repo = await res.json()
-  // Pass data to the page via props
+  // Pass data to the page via props ola
   return { props: { noticias: repo } }
 }
 export default function Page({ noticias }) {
   return <>
     <Container>
-      <Row xs={1} md={3} className="pt-2 g-4">
+      <Row xs={1} md={3}> 
         {Array.isArray(noticias) ?
           noticias.map(noticia => (
-            <Cards idnoticia={noticia.idnoticia}
+            <Cards idnoticia={noticia._id}
               conteudonoticia={noticia.conteudonoticia}
               titulonoticia={noticia.titulonoticia}
               datahoracadastro={noticia.datahoracadastro}
