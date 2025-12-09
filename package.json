@@ -1,18 +1,13 @@
 {
-  "name": "next_infob",
-  "version": "1.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
+  "name": "express",
   "dependencies": {
-    "bootstrap": "^5.3.5",
-    "next": "15.3.0",
-    "react": "^19.0.0",
-    "react-bootstrap": "^2.10.9",
-    "react-dom": "^19.0.0"
+    "cors": "^2.8.5",
+    "ejs": "^3.1.10",
+    "express": "5.1.0",
+    "mongodb": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "5.0.0",
+    "@types/node": "20.11.17"
   }
 }
