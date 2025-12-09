@@ -8,7 +8,7 @@ export async function updateNoticiaRequest(id, titulo, conteudo, tipo) {
     };
     console.log(body);
     try {
-        const response = await fetch("https://noticiasapi-omega.vercel.app/putnoticias", {
+        const response = await fetch("https://apivillyanb.vercel.app/putnoticias", {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
