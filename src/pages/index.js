@@ -4,7 +4,7 @@ export async function getServerSideProps() {
   // Fetch data from  API notícias
   const res = await fetch('https://api-villyan-b.vercel.app/noticias')
   const repo = await res.json()
-  // Pass data to the page via props
+  // Pass data to the page via propss
   return { props: { noticias: repo } }
 }
 export default function Home({ noticias }) {
